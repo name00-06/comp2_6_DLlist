@@ -23,7 +23,7 @@ void initialize_list(list* l)
 // 先頭にデータを追加
 void push_front(list* l, node* p)
 {
-	p->Next = l->header;
+	p->pNext = l->header;
 
 	if(l->header != NULL)
 	{
@@ -40,7 +40,7 @@ void push_front(list* l, node* p)
 // 末尾にデータを追加
 void push_back(list* l, node* p)
 {
-	p->Prev = l->footer;
+	p->pPrev = l->footer;
 
 	if
 	{
@@ -58,7 +58,9 @@ void push_back(list* l, node* p)
 void remove_node(list* l, node* p)
 {
 	if(p == NULL || l ==NULL)
+	{		
 		return;
+	}
 
 	if(p->pPrev != NULL)
 	{
