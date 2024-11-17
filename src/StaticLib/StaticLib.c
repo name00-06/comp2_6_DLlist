@@ -42,7 +42,7 @@ void push_back(list* l, node* p)
 {
 	p->pPrev = l->footer;
 
-	if
+	if(l->footer != NULL)
 	{
 		l->footer->pNext = p;
 	}
